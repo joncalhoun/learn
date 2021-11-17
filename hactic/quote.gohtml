@@ -1,0 +1,11 @@
+{{define "quote"}}
+<blockquote class="px-12 bg-gray-100 rounded-lg m-12 flex space-x-8">
+	<div class="text-center py-8">
+    {{if .Img}}<img class="w-32 h-32 rounded-full" src="{{.Img}}"/>{{else}}<svg>faking this...</svg>{{end}}
+    <div>{{.Who}}</div>
+  </div>
+	<div class="flex-grow text-lg py-12">
+		{{range .Quote}}<p>{{.}}</p>{{end}}
+	</div>
+</blockquote>
+{{end}}
